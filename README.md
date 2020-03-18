@@ -6,7 +6,7 @@ To directly install LGOGDownloader (as opposed to compiling it yourself), you ca
 
 _Note: Currently only Fedora 30 and 31 are supported._
 
-## Branches:
+## Branches
 
 | Branch               | Description   |
 | :------------------- |:--------------| 
