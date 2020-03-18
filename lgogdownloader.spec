@@ -40,12 +40,8 @@ License:        WTFPL
 URL:            https://sites.google.com/site/gogdownloader/
 Summary:        A downloader for GOG.com files
 
-%if ! 0%{?use_git}
-#Source0:        https://sites.google.com/site/%{name}/%{name}-%{version}.tar.gz
+# https://github.com/Sude-/lgogdownloader/archive/v3.4.tar.gz
 Source0:        https://github.com/%{gh_owner}/%{gh_project}/archive/v3.4.tar.gz#/%{name}-%{version}.tar.gz
-%else
-Source0:        https://github.com/%{gh_owner}/%{gh_project}/archive/%{gh_commit}/%{gh_project}-%{version}-%{gh_short}.tar.gz#/%{name}-%{gh_commit}.tar.gz
-%endif
 
 # patches from Debian
 # https://packages.debian.org/sid/lgogdownloader
