@@ -1,0 +1,14 @@
+Description: Provide meaningful whatis entry
+Author: Stephen Kitt <skitt@debian.org>
+
+--- a/man/CMakeLists.txt
++++ b/man/CMakeLists.txt
+@@ -11,7 +11,7 @@
+   set(MAN_FILE ${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}.1.gz)
+   add_custom_command(
+     OUTPUT ${MAN_FILE}
+-    COMMAND ${HELP2MAN} -N -i ${H2M_FILE} -o ${MAN_PAGE} ${PROJECT_BINARY_DIR}/${PROJECT_NAME}${CMAKE_EXECUTABLE_SUFFIX}
++    COMMAND ${HELP2MAN} -N -i ${H2M_FILE} -n "downloader for GOG.com games and other files" -o ${MAN_PAGE} ${PROJECT_BINARY_DIR}/${PROJECT_NAME}${CMAKE_EXECUTABLE_SUFFIX}
+     COMMAND ${GZIP} -f -9 ${MAN_PAGE}
+     MAIN_DEPENDENCY ${H2M_FILE}
+ 	COMMENT "Building man page"

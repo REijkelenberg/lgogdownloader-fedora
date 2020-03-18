@@ -1,0 +1,12 @@
+diff -Naur lgogdownloader-ea0ec2a9bdac3ac2e7446dbfb2189a6a141e512a.orig/man/CMakeLists.txt lgogdownloader-ea0ec2a9bdac3ac2e7446dbfb2189a6a141e512a/man/CMakeLists.txt
+--- lgogdownloader-ea0ec2a9bdac3ac2e7446dbfb2189a6a141e512a.orig/man/CMakeLists.txt	2019-03-01 22:12:04.000000000 +0100
++++ lgogdownloader-ea0ec2a9bdac3ac2e7446dbfb2189a6a141e512a/man/CMakeLists.txt	2019-03-03 04:09:06.316899435 +0100
+@@ -11,7 +11,7 @@
+   set(MAN_FILE "${CMAKE_CURRENT_BINARY_DIR}/${PROJECT_NAME}.1.gz")
+   add_custom_command(
+     OUTPUT ${MAN_FILE}
+-    COMMAND ${HELP2MAN} -N -i ${H2M_FILE} -o ${MAN_PAGE} "\"${PROJECT_BINARY_DIR}/${PROJECT_NAME}${CMAKE_EXECUTABLE_SUFFIX}\""
++    COMMAND ${HELP2MAN} -N -i ${H2M_FILE} -n "downloader for GOG.com games and other files" -o ${MAN_PAGE} "\"${PROJECT_BINARY_DIR}/${PROJECT_NAME}${CMAKE_EXECUTABLE_SUFFIX}\""
+     COMMAND ${GZIP} -f -9 ${MAN_PAGE}
+     MAIN_DEPENDENCY ${H2M_FILE}
+ 	COMMENT "Building man page"
