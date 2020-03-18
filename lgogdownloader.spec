@@ -4,8 +4,8 @@
   %define _default_patch_fuzz 2
 %endif
 
-%global gh_commit    ea0ec2a9bdac3ac2e7446dbfb2189a6a141e512a
-%global gh_short     %(c=%{gh_commit}; echo ${c:0:7})
+#%global gh_commit    ea0ec2a9bdac3ac2e7446dbfb2189a6a141e512a
+#%global gh_short     %(c=%{gh_commit}; echo ${c:0:7})
 %global gh_owner     Sude-
 %global gh_project   lgogdownloader
 
