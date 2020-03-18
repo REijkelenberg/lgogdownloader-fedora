@@ -29,7 +29,7 @@
 %{!?_licensedir:%global license %doc}
 
 Name:           lgogdownloader
-Version:        3.4
+Version:        3.6
 %if ! 0%{?use_git}
 Release:        1%{?dist}
 %else
@@ -42,7 +42,7 @@ Summary:        A downloader for GOG.com files
 
 %if ! 0%{?use_git}
 #Source0:        https://sites.google.com/site/%{name}/%{name}-%{version}.tar.gz
-Source0:        https://github.com/%{gh_owner}/%{gh_project}/archive/v3.4.tar.gz#/%{name}-%{version}.tar.gz
+Source0:        https://github.com/%{gh_owner}/%{gh_project}/archive/v3.6.tar.gz#/%{name}-%{version}.tar.gz
 %else
 Source0:        https://github.com/%{gh_owner}/%{gh_project}/archive/%{gh_commit}/%{gh_project}-%{version}-%{gh_short}.tar.gz#/%{name}-%{gh_commit}.tar.gz
 %endif
@@ -162,6 +162,10 @@ export CPLUS_INCLUDE_PATH
 
 
 %changelog
+* Wed Mar 18 2020 Ruub <> - 3.6-1
+- Forked from oroginal COPR repository
+- Update to the latest version
+
 * Sun Mar 03 2019 Tomasz Tomasik <scx.mail@gmail.com> - 3.4-2.gitea0ec2a
 - Update to the latest version
 
